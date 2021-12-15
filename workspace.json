@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "flowtie.io": "apps/flowtie.io",
+    "flowtie.io-e2e": "apps/flowtie.io-e2e"
+  }
+}
