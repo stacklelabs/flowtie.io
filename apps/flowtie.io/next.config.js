@@ -8,6 +8,7 @@ const { withSentryConfig } = require('@sentry/nextjs');
 const nextConfig = {
   experimental: {
     concurrentFeatures: true,
+    serverComponents: true,
   },
   reactStrictMode: true,
   nx: {
