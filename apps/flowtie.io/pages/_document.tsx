@@ -1,40 +1,12 @@
-import Document, {
-  Head,
-  Html,
-  Main,
-  NextScript,
-  DocumentContext,
-  DocumentProps,
-  DocumentInitialProps,
-} from 'next/document';
-import Script from 'next/script';
-
-import { GA_TRACKING_ID } from '@flowtie/utils';
+import Document, { Head, Html, Main, NextScript } from 'next/document';
 
 export default function CustomDocument() {
   return (
     <Html lang="en-US">
       <Head>
         <meta name="sentry-trace" content="{{ span.toSentryTrace() }}" />
-        <Script
-          id={'ga-one'}
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-        />
-        <Script
-          id={'ga-two'}
-          strategy={'afterInteractive'}
-          dangerouslySetInnerHTML={{
-            __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
-          }}
-        />
       </Head>
+
       <body className="loading">
         <Main />
         <NextScript />
