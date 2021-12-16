@@ -7,6 +7,7 @@ import Document, {
   DocumentProps,
   DocumentInitialProps,
 } from 'next/document';
+import Script from 'next/script';
 
 import { GA_TRACKING_ID } from '@flowtie/utils';
 
@@ -16,11 +17,13 @@ export default function CustomDocument() {
       <Head>
         <title>Flowtie | Coming Soon!</title>
         <meta name="sentry-trace" content="{{ span.toSentryTrace() }}" />
-        <script
-          async
+        <Script
+          id={'ga-one'}
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
         />
-        <script
+        <Script
+          id={'ga-two'}
+          strategy={'afterInteractive'}
           dangerouslySetInnerHTML={{
             __html: `
             window.dataLayer = window.dataLayer || [];
