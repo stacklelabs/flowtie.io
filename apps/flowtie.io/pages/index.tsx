@@ -213,6 +213,7 @@ export default function Example() {
                     alt="Swan"
                     width={800}
                     height={736}
+                    priority={true}
                   />
                 </div>
               </div>
