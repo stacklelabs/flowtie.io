@@ -2,6 +2,11 @@ import './page.module.css';
 import { useRouter } from 'next/router';
 import * as React from 'react';
 import * as utils from '@flowtie/utils';
+import dynamic from 'next/dynamic';
+import { Spinner } from '@flowtie/ui-components';
+
+const Header = React.lazy(() => import('../header/header'));
+const Footer = React.lazy(() => import('../footer/footer'));
 
 /* eslint-disable-next-line */
 export interface PageProps {}
@@ -31,7 +36,19 @@ export const Page: React.FC<PageProps> = (props) => {
     };
   }, [router.events]);
 
-  return <div>{props.children}</div>;
+  return (
+    <div className="theme-light bg-background min-h-screen overflow-hidden ">
+      <React.Suspense fallback={<Spinner />}>
+        <Header brandName="Flowtie" />
+      </React.Suspense>
+      <React.Suspense fallback={<Spinner />}>
+        <main className="pt-16">{props.children}</main>
+      </React.Suspense>
+      <React.Suspense fallback={<Spinner />}>
+        <Footer />
+      </React.Suspense>
+    </div>
+  );
 };
 
 export default Page;

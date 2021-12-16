@@ -47,16 +47,19 @@ const features = [
 
 export default function Example() {
   return (
-    <div className="theme-light bg-background min-h-screen overflow-hidden ">
+    <div
+      className="cccccbcrkftibekjndgrkbrkhfjleltigruchcfntgbk
+     "
+    >
       <Head>
         <title>Flowtie | Coming Soon!</title>
       </Head>
-      <div className="mx-auto lg:max-w-[1024px] flex flex-col">
-        <div className="flex px-4 py-4">
+      <div className="mx-auto lg:max-w-[1280px] flex flex-col px-2">
+        {/* <div className="flex px-4 py-4">
           <span className="inline-block text-4xl font-extrabold tracking-tight text-[#F288B9]/60">
             Flowtie
           </span>
-        </div>
+        </div> */}
         <div className="flex flex-wrap lg:pt-12 lg:px-0">
           <div className="order-1 lg:order-2 min-w-[375px] lg:max-w-[45%] flex flex-col items-center w-full">
             <div className="md:max-w-[500px]">
@@ -70,7 +73,7 @@ export default function Example() {
               {/*    Serverless DX*/}
               {/*  </span>*/}
               {/*</p>*/}
-              <h1 className="text-4xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-6xl tracking-tight font-extrabold text-primary md:text-center lg:text-left ">
+              <h1 className="text-4xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-6xl tracking-tight font-extrabold text-[#F288B9]/80 md:text-center lg:text-left ">
                 <span>Any way you want it,</span>
                 <span className="block text-secondary">
                   that&apos;s the way you need it.

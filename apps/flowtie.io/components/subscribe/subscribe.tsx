@@ -34,7 +34,7 @@ export function Subscribe(props: SubscribeProps) {
   };
 
   return (
-    <div className="mt-10 sm:mt-12">
+    <div className="mt-10 sm:mt-12 md:mt-12 lg:mt-12 xl:-mt-12">
       <form
         action="#"
         className="sm:px-4 sm:max-w-xl sm:mx-auto lg:mx-0 lg:max-w-[50%]"
