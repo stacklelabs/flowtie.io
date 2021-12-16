@@ -15,7 +15,6 @@ export default function CustomDocument() {
   return (
     <Html lang="en-US">
       <Head>
-        <title>Flowtie | Coming Soon!</title>
         <meta name="sentry-trace" content="{{ span.toSentryTrace() }}" />
         <Script
           id={'ga-one'}

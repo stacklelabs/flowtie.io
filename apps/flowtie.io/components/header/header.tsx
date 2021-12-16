@@ -21,7 +21,7 @@ const HeaderLogo: FC = () => {
     <div className="flex items-start">
       <Link href="#">
         <a>
-          <h1 className="text-3xl tracking-tight font-extrabold text-secondary">
+          <h1 className="text-4xl tracking-tight font-extrabold text-gray-500">
             Flowtie
           </h1>
           {/*<img*/}

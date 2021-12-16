@@ -37,7 +37,7 @@ export function Subscribe(props: SubscribeProps) {
     <div className="mt-10 sm:mt-12">
       <form
         action="#"
-        className="sm:max-w-xl sm:mx-auto lg:mx-0"
+        className="sm:px-4 sm:max-w-xl sm:mx-auto lg:mx-0 lg:max-w-[50%]"
         onSubmit={handleSubscribe}
       >
         <div className="sm:flex">

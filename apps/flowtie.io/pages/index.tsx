@@ -17,24 +17,128 @@
 import { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import { ChevronRightIcon } from '@heroicons/react/solid';
+import { ChevronRightIcon, CheckIcon } from '@heroicons/react/solid';
 import Image from 'next/image';
 import MailingListSubscribe from '../components/subscribe/subscribe';
 import Header from '../components/header/header';
+import Head from 'next/head';
+
+import swan from '../components/header/assets/Swan.png';
 
 const navigation = [];
 
+const features = [
+  {
+    name: 'Invite team members',
+    description:
+      'You can manage phone, email and chat conversations all from a single mailbox.',
+  },
+  {
+    name: 'List view',
+    description:
+      'You can manage phone, email and chat conversations all from a single mailbox.',
+  },
+  {
+    name: 'Keyboard shortcuts',
+    description:
+      'You can manage phone, email and chat conversations all from a single mailbox.',
+  },
+];
+
 export default function Example() {
+  return (
+    <div className="theme-light bg-background min-h-screen overflow-hidden ">
+      <Head>
+        <title>Flowtie | Coming Soon!</title>
+      </Head>
+      <div className="mx-auto lg:max-w-[1024px] flex flex-col">
+        <div className="flex px-4 py-4">
+          <span className="inline-block text-4xl font-extrabold tracking-tight text-[#F288B9]/60">
+            Flowtie
+          </span>
+        </div>
+        <div className="flex flex-wrap lg:pt-12 lg:px-0">
+          <div className="order-1 lg:order-2 min-w-[375px] lg:max-w-[45%] flex flex-col items-center w-full">
+            <div className="md:max-w-[500px]">
+              <Image src={swan} priority={true} alt="swan-shaped floatie" />
+            </div>
+          </div>
+          <div className="order-2 lg:order-1 min-w-[375px] lg:max-w-[50%] flex flex-col lg:items-center w-[100%]">
+            <div className="px-4 flex justify-center flex-col">
+              {/*<p className="items-start mt-4 lg:mt-12 md:mt-8 text-white text-xl md:text-2xl md:max-w-[650px] md:text-center md:mx-auto lg:text-left  mb-4">*/}
+              {/*  <span className="bg-primary p-1 rounded uppercase tracking-tight text-sm">*/}
+              {/*    Serverless DX*/}
+              {/*  </span>*/}
+              {/*</p>*/}
+              <h1 className="text-4xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-6xl tracking-tight font-extrabold text-primary md:text-center lg:text-left ">
+                <span>Any way you want it,</span>
+                <span className="block text-secondary">
+                  that&apos;s the way you need it.
+                </span>
+              </h1>
+              <p className="mt-4 lg:mt-12 md:mt-8 text-gray-600 text-xl md:text-2xl md:max-w-[650px] md:text-center md:mx-auto lg:text-left">
+                <span className="font-bold">Flowtie</span> streams logs,
+                metrics, CI/CD updates, and other relevant information about
+                your serverless deployments directly to you, wherever you are,
+                on all your devices.
+              </p>
+            </div>
+          </div>
+        </div>
+        <MailingListSubscribe />
+        {/*<div className="flex justify-center my-12 px-4 mt-24">*/}
+        {/*  <dl className="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-2 lg:grid-rows-4 lg:grid-flow-col lg:gap-x-6 lg:gap-y-10 lg:gap-x-8">*/}
+        {/*    {features.map((feature) => (*/}
+        {/*      <div key={feature.name} className="relative">*/}
+        {/*        <dt>*/}
+        {/*          <CheckIcon*/}
+        {/*            className="absolute h-6 w-6 text-gray-600"*/}
+        {/*            aria-hidden="true"*/}
+        {/*          />*/}
+        {/*          <p className="ml-9 text-lg leading-6 font-bold tracking-tight text-gray-600">*/}
+        {/*            {feature.name}*/}
+        {/*          </p>*/}
+        {/*        </dt>*/}
+        {/*        <dd className="mt-2 ml-9 text-lg text-gray-600">*/}
+        {/*          {feature.description}*/}
+        {/*        </dd>*/}
+        {/*      </div>*/}
+        {/*    ))}*/}
+        {/*  </dl>*/}
+        {/*</div>*/}
+        <div className="mt-6 py-12">
+          {/*<h2 className="text-center text-4xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-8xl tracking-tight font-extrabold text-primary md:text-center lg:text-left">*/}
+          {/*  <span className="block text-secondary">Coming soon...</span>*/}
+          {/*  <span>Act now for early access!</span>*/}
+          {/*</h2>*/}
+        </div>
+      </div>
+    </div>
+  );
+
+  // <p className="mt-3 text-base text-gray-600 sm:mt-5 xs:text-lg xs:font-bold sm:text-xl lg:text-xl xl:text-4xl xl:mt-12">
+  //   <span className="font-bold">Flowtie</span> streams logs,
+  //   metrics, and other relevant data about your serverless
+  //   functions to all your devices. From development to
+  //   production; keep your head above water with Flowtie.
+  // </p>
+  // <h1 className="mt-4 text-3xl tracking-tight font-extrabold text-[#F288B9] sm:mt-5 sm:text-6xl lg:mt-6 lg:text-6xl xl:text-7xl">
+  //   <span className="">Any way you want it</span>
+  //   <span className="block text-[rgb(242,164,69)]">
+  //     that&apos;s the way you need it
+  //   </span>
+  // </h1>;
+
   return (
     <div className="relative overflow-hidden theme-light bg-background min-h-screen">
       <Header />
 
-      <main>
-        <div className="pt-2 sm:pt-10 lg:pt-6 lg:pb-14 lg:overflow-hidden ">
-          <div className="mx-auto max-w-7xl xl:px-8">
-            <div className="lg:grid lg:grid-cols-2 lg:gap-8">
-              <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center md:text-center xl:px-0 lg:flex lg:items-center">
-                <div className="lg:py-24">
+      <main className="">
+        <div className="sm:pt-6 lg:pt-0 lg:overflow-hidden">
+          <div className="mx-auto max-w-7xl">
+            <div className="lg:grid lg:grid-cols-2 lg:gap-0 lg:place-content-center lg:px-2 lg:mt-8">
+              <div className="mx-auto max-w-md px-2 sm:max-w-2xl sm:px-6 sm:text-center md:text-center xl:max-w-4xl xl:px-0 lg:col-start-1">
+                <div className="lg:pb-6" style={{}}>
                   {/* <a
                     href="#"
                     className="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
@@ -48,23 +152,21 @@ export default function Example() {
                       aria-hidden="true"
                     />
                   </a> */}
-                  <img
-                    alt="Flowtie logo"
-                    src="/assets/img/Swan.png"
-                    className="w-auto lg:max-h-96 mx-auto"
-                  />
-                  <h1 className="mt-4 text-4xl tracking-tight font-extrabold  text-[#F288B9] sm:mt-5 sm:text-6xl lg:mt-6 lg:text-6xl xl:text-6xl">
-                    <span className="">Anyway you want it</span>
+                  <div className="lg:col-start-1 lg:row-start-1 lg:col-start-2">
+                    <img
+                      alt="Flowtie logo"
+                      src="/assets/img/Swan.png"
+                      className="w-auto object-contain lg:hidden"
+                    />
+                  </div>
+
+                  <h1 className="mt-4 text-3xl tracking-tight font-extrabold text-[#F288B9] sm:mt-5 sm:text-6xl lg:mt-6 lg:text-6xl xl:text-7xl">
+                    <span className="">Any way you want it</span>
                     <span className="block text-[rgb(242,164,69)]">
                       that&apos;s the way you need it
                     </span>
                   </h1>
-                  <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                    <span className="font-bold">Flowtie</span> streams logs,
-                    metrics, and other relevant data about your serverless
-                    functions to all your devices. From development to
-                    production; keep your head above water with Flowtie.
-                  </p>
+
                   {/* <p className="mt-3 text-sm text-gray-300 sm:mt-4">
                         Start your free 14-day trial, no credit card necessary.
                         By providing your email, you agree to our{' '}
@@ -100,6 +202,13 @@ export default function Example() {
                     </form>
                   </div> */}
                 </div>
+              </div>
+              <div className="lg:col-start-1 lg:row-start-1 mt-12 lg:col-start-2">
+                <img
+                  alt="Flowtie logo"
+                  src="/assets/img/Swan.png"
+                  className="w-auto object-contain hidden lg:block"
+                />
               </div>
               {/*<div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">*/}
               {/*  <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0"></div>*/}
