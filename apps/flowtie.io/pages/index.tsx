@@ -157,9 +157,9 @@ export default function Example() {
                     />
                   </a> */}
                   <h1 className="mt-4 text-4xl tracking-tight font-extrabold  text-[#F288B9] sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                    <span className="block">Experience serverless</span>
+                    <span className="block">Anyway you want it</span>
                     <span className="block text-[rgb(242,164,69)]">
-                      on your own terms
+                      that&apos;s the way you need it
                     </span>
                   </h1>
                   <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">

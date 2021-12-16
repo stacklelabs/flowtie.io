@@ -74,10 +74,7 @@ export function Subscribe(props: SubscribeProps) {
         )}
         {state === SubscribeState.Success && (
           <div>
-            <span>
-              Awesome, we sent a confirmation email to the email address above!
-              Once you confirm your address, you are all set!
-            </span>
+            <span>Awesome, you are all set!</span>
           </div>
         )}
       </form>

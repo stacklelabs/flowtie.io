@@ -15,7 +15,7 @@ const handler = async (req, res) => {
   console.log('URL: ' + url);
   const data = {
     email_address: email,
-    status: 'pending',
+    status: 'subscribed',
   };
 
   const options = {
