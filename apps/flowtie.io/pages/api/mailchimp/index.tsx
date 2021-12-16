@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { withSentry } from '@sentry/nextjs';
 
 const handler = async (req, res) => {
   const { email } = req.body;
@@ -39,4 +40,4 @@ const handler = async (req, res) => {
   }
 };
 
-export default handler;
+export default withSentry(handler);

@@ -4,6 +4,7 @@
     "flowtie.io": "apps/flowtie.io",
     "flowtie.io-e2e": "apps/flowtie.io-e2e",
     "shared-ui-components": "libs/shared/ui/components",
-    "storybook-e2e-components-e2e": "apps/storybook-e2e/components-e2e"
+    "storybook-e2e-components-e2e": "apps/storybook-e2e/components-e2e",
+    "utils": "libs/utils"
   }
 }

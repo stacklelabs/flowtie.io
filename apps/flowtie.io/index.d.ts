@@ -1,3 +1,7 @@
+/// <reference types="gtag.js" />
+
+declare module 'gtag.js';
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 declare module '*.svg' {
   const content: any;

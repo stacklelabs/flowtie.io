@@ -1,4 +1,5 @@
 const { join } = require('path');
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 const { createGlobPatternsForDependencies } = require('@nrwl/next/tailwind');
 
@@ -10,7 +11,14 @@ module.exports = {
   ],
 
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
+      colors: {
+        primary: 'var(--color-primary)',
+      },
+    },
   },
   variants: {
     extend: {},
