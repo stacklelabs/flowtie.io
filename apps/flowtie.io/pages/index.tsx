@@ -20,128 +20,20 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { ChevronRightIcon } from '@heroicons/react/solid';
 import Image from 'next/image';
 import MailingListSubscribe from '../components/subscribe/subscribe';
+import Header from '../components/header/header';
 
 const navigation = [];
 
 export default function Example() {
   return (
-    <div className="relative overflow-hidden">
-      <Popover as="header" className="relative">
-        <div className="bg-[#fef55c] ">
-          <nav
-            className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
-            aria-label="Global"
-          >
-            <div className="flex items-center flex-1">
-              <div className="flex items-center justify-between w-full md:w-auto">
-                <a href="#">
-                  <span className="sr-only">Workflow</span>
-                </a>
-                <div className="-mr-2 flex items-center md:hidden">
-                  {/* <Popover.Button className="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
-                    <span className="sr-only">Open main menu</span>
-                    <MenuIcon className="h-6 w-6" aria-hidden="true" />
-                  </Popover.Button> */}
-                </div>
-              </div>
-              <div className="hidden space-x-8 md:flex md:ml-10">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-base font-medium text-[#F288B9] hover:text-gray-300"
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            <div className="hidden md:flex md:items-center md:space-x-6">
-              {/* <a
-                href="#"
-                className="text-base font-medium text-white hover:text-gray-300"
-              >
-                Log in
-              </a>
-              <a
-                href="#"
-                className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
-              >
-                Start free trial
-              </a> */}
-            </div>
-          </nav>
-        </div>
-
-        <Transition
-          as={Fragment}
-          enter="duration-150 ease-out"
-          enterFrom="opacity-0 scale-95"
-          enterTo="opacity-100 scale-100"
-          leave="duration-100 ease-in"
-          leaveFrom="opacity-100 scale-100"
-          leaveTo="opacity-0 scale-95"
-        >
-          <Popover.Panel
-            focus
-            className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top md:hidden"
-          >
-            <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
-              <div className="px-5 pt-4 flex items-center justify-between">
-                <div>
-                  {/* <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                    alt=""
-                  /> */}
-                </div>
-                <div className="-mr-2">
-                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
-                    <span className="sr-only">Close menu</span>
-                    <XIcon className="h-6 w-6" aria-hidden="true" />
-                  </Popover.Button>
-                </div>
-              </div>
-              <div className="pt-5 pb-6">
-                <div className="px-2 space-y-1">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-                <div className="mt-6 px-5">
-                  <a
-                    href="#"
-                    className="block text-center w-full py-3 px-4 rounded-md shadow bg-indigo-600 text-white font-medium hover:bg-indigo-700"
-                  >
-                    Start free trial
-                  </a>
-                </div>
-                <div className="mt-6 px-5">
-                  <p className="text-center text-base font-medium text-gray-500">
-                    Existing customer?{' '}
-                    <a href="#" className="text-gray-900 hover:underline">
-                      Login
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Popover.Panel>
-        </Transition>
-      </Popover>
+    <div className="relative overflow-hidden theme-light bg-background min-h-screen">
+      <Header />
 
       <main>
-        <div className="pt-10  bg-[#fef55c] sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden min-h-screen">
-          <div className="mx-auto max-w-8xl lg:px-8">
+        <div className="pt-2 sm:pt-10 lg:pt-6 lg:pb-14 lg:overflow-hidden ">
+          <div className="mx-auto max-w-7xl xl:px-8">
             <div className="lg:grid lg:grid-cols-2 lg:gap-8">
-              <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
+              <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center md:text-center xl:px-0 lg:flex lg:items-center">
                 <div className="lg:py-24">
                   {/* <a
                     href="#"
@@ -156,8 +48,13 @@ export default function Example() {
                       aria-hidden="true"
                     />
                   </a> */}
-                  <h1 className="mt-4 text-4xl tracking-tight font-extrabold  text-[#F288B9] sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                    <span className="block">Anyway you want it</span>
+                  <img
+                    alt="Flowtie logo"
+                    src="/assets/img/Swan.png"
+                    className="w-auto lg:max-h-96 mx-auto"
+                  />
+                  <h1 className="mt-4 text-4xl tracking-tight font-extrabold  text-[#F288B9] sm:mt-5 sm:text-6xl lg:mt-6 lg:text-6xl xl:text-6xl">
+                    <span className="">Anyway you want it</span>
                     <span className="block text-[rgb(242,164,69)]">
                       that&apos;s the way you need it
                     </span>
@@ -166,7 +63,7 @@ export default function Example() {
                     <span className="font-bold">Flowtie</span> streams logs,
                     metrics, and other relevant data about your serverless
                     functions to all your devices. From development to
-                    production; keep your head above water.
+                    production; keep your head above water with Flowtie.
                   </p>
                   {/* <p className="mt-3 text-sm text-gray-300 sm:mt-4">
                         Start your free 14-day trial, no credit card necessary.
@@ -204,25 +101,127 @@ export default function Example() {
                   </div> */}
                 </div>
               </div>
-              <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
-                <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
-                  {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
-                  <Image
-                    className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src="/assets/img/Swan.png"
-                    alt="Swan"
-                    width={800}
-                    height={736}
-                    priority={true}
-                  />
-                </div>
-              </div>
+              {/*<div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">*/}
+              {/*  <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0"></div>*/}
+              {/*</div>*/}
             </div>
           </div>
         </div>
 
         {/* More main page content here... */}
+        <div className="py-12"></div>
       </main>
     </div>
   );
 }
+
+// <Popover as="header" className="relative">
+//   <div className="bg-[#fef55c] ">
+//     <nav
+//       className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
+//       aria-label="Global"
+//     >
+//       <div className="flex items-center flex-1">
+//         <div className="flex items-center justify-between w-full md:w-auto">
+//           <a href="#">
+//             <span className="sr-only">Workflow</span>
+//           </a>
+//           <div className="-mr-2 flex items-center md:hidden">
+//             {/* <Popover.Button className="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
+//                     <span className="sr-only">Open main menu</span>
+//                     <MenuIcon className="h-6 w-6" aria-hidden="true" />
+//                   </Popover.Button> */}
+//           </div>
+//         </div>
+//         <div className="hidden space-x-8 md:flex md:ml-10">
+//           {navigation.map((item) => (
+//             <a
+//               key={item.name}
+//               href={item.href}
+//               className="text-base font-medium text-[#F288B9] hover:text-gray-300"
+//             >
+//               {item.name}
+//             </a>
+//           ))}
+//         </div>
+//       </div>
+//
+//       <div className="hidden md:flex md:items-center md:space-x-6">
+//         {/* <a
+//                 href="#"
+//                 className="text-base font-medium text-white hover:text-gray-300"
+//               >
+//                 Log in
+//               </a>
+//               <a
+//                 href="#"
+//                 className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
+//               >
+//                 Start free trial
+//               </a> */}
+//       </div>
+//     </nav>
+//   </div>
+//
+//   <Transition
+//     as={Fragment}
+//     enter="duration-150 ease-out"
+//     enterFrom="opacity-0 scale-95"
+//     enterTo="opacity-100 scale-100"
+//     leave="duration-100 ease-in"
+//     leaveFrom="opacity-100 scale-100"
+//     leaveTo="opacity-0 scale-95"
+//   >
+//     <Popover.Panel
+//       focus
+//       className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top md:hidden"
+//     >
+//       <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+//         <div className="px-5 pt-4 flex items-center justify-between">
+//           <div>
+//             {/* <img
+//                     className="h-8 w-auto"
+//                     src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+//                     alt=""
+//                   /> */}
+//           </div>
+//           <div className="-mr-2">
+//             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
+//               <span className="sr-only">Close menu</span>
+//               <XIcon className="h-6 w-6" aria-hidden="true" />
+//             </Popover.Button>
+//           </div>
+//         </div>
+//         <div className="pt-5 pb-6">
+//           <div className="px-2 space-y-1">
+//             {navigation.map((item) => (
+//               <a
+//                 key={item.name}
+//                 href={item.href}
+//                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
+//               >
+//                 {item.name}
+//               </a>
+//             ))}
+//           </div>
+//           <div className="mt-6 px-5">
+//             <a
+//               href="#"
+//               className="block text-center w-full py-3 px-4 rounded-md shadow bg-indigo-600 text-white font-medium hover:bg-indigo-700"
+//             >
+//               Start free trial
+//             </a>
+//           </div>
+//           <div className="mt-6 px-5">
+//             <p className="text-center text-base font-medium text-gray-500">
+//               Existing customer?{' '}
+//               <a href="#" className="text-gray-900 hover:underline">
+//                 Login
+//               </a>
+//             </p>
+//           </div>
+//         </div>
+//       </div>
+//     </Popover.Panel>
+//   </Transition>
+// </Popover>

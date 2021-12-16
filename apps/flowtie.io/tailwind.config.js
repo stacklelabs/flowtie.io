@@ -7,6 +7,7 @@ module.exports = {
   mode: 'jit',
   content: [
     join(__dirname, 'pages/**/*.{js,ts,jsx,tsx}'),
+    join(__dirname, 'components/**/*.{js,ts,jsx,tsx}'),
     ...createGlobPatternsForDependencies(__dirname),
   ],
 
@@ -17,6 +18,9 @@ module.exports = {
       },
       colors: {
         primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
+        background: 'var(--color-background)',
+        body: 'var(--color-text)',
       },
     },
   },

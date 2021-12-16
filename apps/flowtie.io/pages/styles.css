@@ -5,9 +5,15 @@
 @tailwind utilities;
 
 .theme-light {
-  --color-primary: theme('colors.blue.600');
+  --color-primary: #F288B9;
+  --color-secondary: rgb(242,164,69);
+  --color-background: #fef55c;
+  --color-text: #333333;
 }
 
 .theme-dark {
-  --color-primary: theme('colors.blue.300')
+  --color-primary: #F288B9;
+  --color-secondary: rgb(242,164,69);
+  --color-background: #fef55c;
+  --color-text: #333333;
 }
