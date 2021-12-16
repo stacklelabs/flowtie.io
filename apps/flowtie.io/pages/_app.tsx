@@ -6,9 +6,9 @@ function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Welcome to flowtie.io!</title>
+        <title>Flowtie | Coming Soon</title>
       </Head>
-      <main className="app">
+      <main className="">
         <Component {...pageProps} />
       </main>
     </>
