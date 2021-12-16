@@ -19,6 +19,7 @@ import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { ChevronRightIcon } from '@heroicons/react/solid';
 import Image from 'next/image';
+import MailingListSubscribe from '../components/subscribe/subscribe';
 
 const navigation = [];
 
@@ -55,6 +56,7 @@ export default function Example() {
                 ))}
               </div>
             </div>
+
             <div className="hidden md:flex md:items-center md:space-x-6">
               {/* <a
                 href="#"
@@ -174,7 +176,8 @@ export default function Example() {
                         </a>
                         .
                       </p> */}
-                  <div className="mt-10 sm:mt-12">
+                  <MailingListSubscribe />
+                  {/* <div className="mt-10 sm:mt-12">
                     <form action="#" className="sm:max-w-xl sm:mx-auto lg:mx-0">
                       <div className="sm:flex">
                         <div className="min-w-0 flex-1">
@@ -198,7 +201,7 @@ export default function Example() {
                         </div>
                       </div>
                     </form>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
