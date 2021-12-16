@@ -134,7 +134,7 @@ export default function Example() {
 
   return (
     <div className="relative overflow-hidden theme-light bg-background min-h-screen">
-      <Header />
+      <Header brandName="Flowtie" />
 
       <main className="">
         <div className="sm:pt-6 lg:pt-0 lg:overflow-hidden">
